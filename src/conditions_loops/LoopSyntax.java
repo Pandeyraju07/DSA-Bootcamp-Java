@@ -1,7 +1,7 @@
 package conditions_loops;
 
 /**
- * Easy reference for for / while / do-while syntax.
+ * Easy reference for / while / do-while syntax.
  * Run this class and read the output next to each example.
  */
 public class LoopSyntax {
