@@ -1,20 +1,23 @@
-package arrays;
+package searching;
 
 /**
- * Concept: search by checking each index (linear scan).
+ * Concept: Linear Search — check elements one by one.
  *
- * INTERVIEW / BASICS FAVORITE:
- *   Find the index of a target in an array.
- *   Return -1 if not found.
+ * When to use:
+ *   Unsorted data, no HashMap / binary search available.
+ *
+ * Core idea:
+ *   for each index i
+ *     if arr[i] == target → return i
+ *   return -1
+ *
+ * Time: O(n)   Space: O(1)
+ * Best case O(1) if first element matches.
  *
  * Dry run arr=[4, 2, 7, 1, 9], target=7:
  *   i=0 → 4 no
  *   i=1 → 2 no
  *   i=2 → 7 yes → return 2
- *
- * Time: O(n)   Space: O(1)
- *
- * More interview variants → package `searching`
  */
 public class LinearSearch {
 
@@ -23,7 +26,6 @@ public class LinearSearch {
         int target = 7;
 
         int index = search(arr, target);
-
         if (index != -1) {
             System.out.println(target + " found at index " + index);
         } else {
@@ -32,6 +34,9 @@ public class LinearSearch {
     }
 
     private static int search(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+            return -1;
+        }
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == target) {
                 return i;
