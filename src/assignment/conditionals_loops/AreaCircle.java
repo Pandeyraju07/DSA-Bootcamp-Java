@@ -12,8 +12,7 @@ public class AreaCircle {
         System.out.println("The area of the circle is " + result);
     }
     public static double circumference(double radius) {
-        double area = radius * radius;
-        return area;
+        return radius * radius;
     }
 
 }

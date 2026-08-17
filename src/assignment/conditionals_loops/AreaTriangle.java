@@ -15,7 +15,6 @@ public class AreaTriangle {
     }
 
     public static double areaOfTriangle(double base, double height) {
-        double area = (base * height)/2;
-        return area;
+        return (base * height)/2;
     }
 }
